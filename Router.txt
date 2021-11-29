@@ -1,0 +1,17 @@
+enable
+configure terminal
+banner motd # Uso exclusivo de estudiantes de RECO #
+hostname Colombia
+enable secret RECO_E
+line console 0 
+password RECO_C
+login 
+line vty 0 4
+logging synchronous
+password RECO_T
+login 
+no ip domain-lookup
+end
+copy running config startup-config
+
+
